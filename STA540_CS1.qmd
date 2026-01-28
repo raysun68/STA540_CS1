@@ -20,6 +20,8 @@ table(CTN_dat$Q6_5)
 table(CTN_dat$Q6_6)
 table(CTN_dat$Q6_7)
 table(CTN_dat$PO_FLAG)
+
+# Filter original observations to keep the 254 that matches the study
 CTN_filt = CTN_dat |>
   filter(PO_FLAG == "Include")
 table(CTN_filt$FINISHED)
@@ -58,6 +60,7 @@ data.frame(
 Race, n (%):
 
 ```{r}
+# Recode race to match table 1
 race_recoded <- ifelse(
   CTN_final$Q5_3 == 23, "White",
   ifelse(
@@ -163,11 +166,10 @@ CTN_final$ever_HIV_test <- ifelse(
   "No"
 )
 
-# Create table
 tab_HIV <- table(CTN_final$ever_HIV_test)
 percent <- prop.table(tab_HIV) * 100
 
-# Display only the 'Yes' row
+# Display only the 'Yes' row to match table 1
 data.frame(
   n = tab_HIV["Ever tested for HIV during lifetime"],
   percent = round(percent["Ever tested for HIV during lifetime"], 1)
@@ -255,12 +257,16 @@ CTN_counts <- CTN_rec %>%
     WAVE = factor(WAVE, levels = c(1,2)),
     PLATFORM = factor(PLATFORM, levels = c("Dating app", "Social media", "Info site"))
   )
+
+# Fit poisson model
 pois_mod <- glm(
   kits ~ WAVE * PLATFORM,
   family = poisson,
   offset = log(time),
   data = CTN_counts
 )
+
+# Use emmeans for contrasts within waves
 emm = emmeans(
   pois_mod,
   ~ PLATFORM | WAVE,
@@ -277,7 +283,7 @@ The rate estimations from the Poisson regression model successfully reproduced t
 ```{r warning = FALSE}
 pw <- contrast(
   emm,
-  method = "pairwise",  # differences
+  method = "pairwise",  
   adjust = "none"          # adjust later, per wave
 )
 pw_df <- as.data.frame(pw)
@@ -294,6 +300,8 @@ wave2 <- pw_df %>%
 
 wave1
 wave2
+
+# Try adjusting counts by 0.5 to prevent zero counts
 
 pois_adj = glm(
   kits_adj ~ WAVE * PLATFORM,

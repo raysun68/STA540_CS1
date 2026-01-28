@@ -9,7 +9,7 @@ users of various platforms may have different characteristics that impact their 
 
 This study's primary objective is to compare the relative effectiveness of social media sites, dating apps, and information search sites in promoting HIV self-testing among minority men who have sex with men (MSM) at an increased risk of HIV infection. Test kit order rates were used as a proxy to evaluate promotion effectiveness. In addition, a secondary objective is to assess differences in characteristics between participants who ordered and did not order an HIV test kit.
 
-B. Table 1:                                 Value
+B. Table 1:                                
 | Characteristic                                                | Value       |
 | ------------------------------------------------------------- | ----------- |
 | **Age, years, median (IQR)**                                  | 25 (21–27)  |
@@ -43,3 +43,21 @@ B. Table 1:                                 Value
 | Dislike for needles                                           | 5 (7.9%)    |
 | Unable to trust that the results will be confidential         | 3 (4.8%)    |
 | Unaware of where to get tested                                | 7 (11.1%)   |
+
+C. Primary/Secondary Results:
+
+Rate of kits ordered: Jack’D - 3.29 kits/day, Instagram - 0.34 kits/day, Bing - 0 kits/day, 
+Grindr - 0.13 kits/day, Facebook - 0.19 kits/day, Google - 0.24 kits/day.
+
+Grindr-Facebook contrast adjusted p-value: 0.47
+Grindr-Google contrast adjusted p-value: 0.37
+Facebook-Google contrast adjusted p-value: 0.47
+
+Jack'd - Instagram contrast adjusted p-value: <0.01
+Jack'd - Bing contrast adjusted p-value: 1.00
+Instagram - Bing contrast adjusted p-value: 1.00
+
+Fisher's exact test for association between “People in my life would leave if I had HIV”: 0.035
+Wilcoxon test for “I think that new HIV/AIDS treatments can eradicate the virus from your body”: 0.029
+Wilcoxon test for “I could not be friends with someone who has HIV/AIDS": 0.033
+

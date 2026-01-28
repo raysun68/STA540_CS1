@@ -47,17 +47,37 @@ B. Table 1:
 C. Primary/Secondary Results:
 
 Rate of kits ordered: Jack’D - 3.29 kits/day, Instagram - 0.34 kits/day, Bing - 0 kits/day, 
+
 Grindr - 0.13 kits/day, Facebook - 0.19 kits/day, Google - 0.24 kits/day.
 
 Grindr-Facebook contrast adjusted p-value: 0.47
+
 Grindr-Google contrast adjusted p-value: 0.37
+
 Facebook-Google contrast adjusted p-value: 0.47
 
 Jack'd - Instagram contrast adjusted p-value: <0.01
+
 Jack'd - Bing contrast adjusted p-value: 1.00
+
 Instagram - Bing contrast adjusted p-value: 1.00
 
 Fisher's exact test for association between “People in my life would leave if I had HIV”: 0.035
+
+D. Reflection: The participant recruited from Yahoo was tricky to identify, I think the manuscript should have given this information for better reproducibility. Some differences between published results and my results are due to rounding, but also some could be careless mistakes in the original study, such as listing 8.7% as 8.9%.
+
+Wave 4 in the original data being included in wave 1 makes sense from the final results, but it would be better if the manuscript had mentioned this. The biggest disparity between reproduced results and manuscript results come in the contrast p-values for the primary analysis, the 0 rate for Bing causes trouble for emmeans and it's hard to replicate what they might have done in SAS to achieve similar p-values.
+
+E. References: Study manuscript: https://pmc.ncbi.nlm.nih.gov/articles/PMC9591705/pdf/formative_v6i9e35648.pdf
+
+NIDA page: https://datashare.nida.nih.gov/data/nida-ctn-0083
+
+emmeans package: https://cran.r-project.org/web/packages/emmeans/vignettes/comparisons.html
+
+ChatGPT was used primarily for code formatting and table constructing.
+
+
 Wilcoxon test for “I think that new HIV/AIDS treatments can eradicate the virus from your body”: 0.029
+
 Wilcoxon test for “I could not be friends with someone who has HIV/AIDS": 0.033
 

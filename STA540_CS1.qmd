@@ -1,6 +1,6 @@
 ---
 title: "STA540_CS1"
-format: html
+format: pdf
 author: "Raymond Sun"
 date: "20260128"
 editor: visual

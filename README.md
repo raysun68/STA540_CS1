@@ -69,7 +69,9 @@ D. Reflection: The participant recruited from Yahoo was tricky to identify, I th
 
 Wave 4 in the original data being included in wave 1 makes sense from the final results, but it would be better if the manuscript had mentioned this. The biggest disparity between reproduced results and manuscript results come in the contrast p-values for the primary analysis, the 0 rate for Bing causes trouble for emmeans and it's hard to replicate what they might have done in SAS to achieve similar p-values.
 
-E. References: Study manuscript: https://pmc.ncbi.nlm.nih.gov/articles/PMC9591705/pdf/formative_v6i9e35648.pdf
+E. References: 
+
+Study manuscript: https://pmc.ncbi.nlm.nih.gov/articles/PMC9591705/pdf/formative_v6i9e35648.pdf
 
 NIDA page: https://datashare.nida.nih.gov/data/nida-ctn-0083
 
